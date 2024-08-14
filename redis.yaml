@@ -1,0 +1,198 @@
+---
+Id: 378ea353fd9a88a25e1966bb290bed8fc1ccb05a01a41f1fd1d8f7073c8069fb
+Created: '2024-08-04T13:51:02.017416545Z'
+Path: docker-entrypoint.sh
+Args:
+- redis-server
+State:
+  Status: exited
+  Running: false
+  Paused: false
+  Restarting: false
+  OOMKilled: false
+  Dead: false
+  Pid: 0
+  ExitCode: 0
+  Error: ''
+  StartedAt: '2024-08-14T15:37:26.657650304Z'
+  FinishedAt: '2024-08-14T15:40:34.062873107Z'
+Image: sha256:509b2fc82da65579aa63481c5b4909d1d777040ea574bf4be7aa1d6d48bf4b5f
+ResolvConfPath: "/var/lib/docker/containers/378ea353fd9a88a25e1966bb290bed8fc1ccb05a01a41f1fd1d8f7073c8069fb/resolv.conf"
+HostnamePath: "/var/lib/docker/containers/378ea353fd9a88a25e1966bb290bed8fc1ccb05a01a41f1fd1d8f7073c8069fb/hostname"
+HostsPath: "/var/lib/docker/containers/378ea353fd9a88a25e1966bb290bed8fc1ccb05a01a41f1fd1d8f7073c8069fb/hosts"
+LogPath: "/var/lib/docker/containers/378ea353fd9a88a25e1966bb290bed8fc1ccb05a01a41f1fd1d8f7073c8069fb/378ea353fd9a88a25e1966bb290bed8fc1ccb05a01a41f1fd1d8f7073c8069fb-json.log"
+Name: "/my-redis"
+RestartCount: 0
+Driver: overlay2
+Platform: linux
+MountLabel: ''
+ProcessLabel: ''
+AppArmorProfile: ''
+ExecIDs: 
+HostConfig:
+  Binds: 
+  ContainerIDFile: ''
+  LogConfig:
+    Type: json-file
+    Config: {}
+  NetworkMode: bridge
+  PortBindings:
+    6379/tcp:
+    - HostIp: ''
+      HostPort: '6379'
+  RestartPolicy:
+    Name: 'no'
+    MaximumRetryCount: 0
+  AutoRemove: false
+  VolumeDriver: ''
+  VolumesFrom: 
+  ConsoleSize:
+  - 30
+  - 120
+  CapAdd: 
+  CapDrop: 
+  CgroupnsMode: host
+  Dns: []
+  DnsOptions: []
+  DnsSearch: []
+  ExtraHosts: 
+  GroupAdd: 
+  IpcMode: private
+  Cgroup: ''
+  Links: 
+  OomScoreAdj: 0
+  PidMode: ''
+  Privileged: false
+  PublishAllPorts: false
+  ReadonlyRootfs: false
+  SecurityOpt: 
+  UTSMode: ''
+  UsernsMode: ''
+  ShmSize: 67108864
+  Runtime: runc
+  Isolation: ''
+  CpuShares: 0
+  Memory: 0
+  NanoCpus: 0
+  CgroupParent: ''
+  BlkioWeight: 0
+  BlkioWeightDevice: []
+  BlkioDeviceReadBps: []
+  BlkioDeviceWriteBps: []
+  BlkioDeviceReadIOps: []
+  BlkioDeviceWriteIOps: []
+  CpuPeriod: 0
+  CpuQuota: 0
+  CpuRealtimePeriod: 0
+  CpuRealtimeRuntime: 0
+  CpusetCpus: ''
+  CpusetMems: ''
+  Devices: []
+  DeviceCgroupRules: 
+  DeviceRequests: 
+  MemoryReservation: 0
+  MemorySwap: 0
+  MemorySwappiness: 
+  OomKillDisable: false
+  PidsLimit: 
+  Ulimits: []
+  CpuCount: 0
+  CpuPercent: 0
+  IOMaximumIOps: 0
+  IOMaximumBandwidth: 0
+  MaskedPaths:
+  - "/proc/asound"
+  - "/proc/acpi"
+  - "/proc/kcore"
+  - "/proc/keys"
+  - "/proc/latency_stats"
+  - "/proc/timer_list"
+  - "/proc/timer_stats"
+  - "/proc/sched_debug"
+  - "/proc/scsi"
+  - "/sys/firmware"
+  - "/sys/devices/virtual/powercap"
+  ReadonlyPaths:
+  - "/proc/bus"
+  - "/proc/fs"
+  - "/proc/irq"
+  - "/proc/sys"
+  - "/proc/sysrq-trigger"
+GraphDriver:
+  Data:
+    LowerDir: "/var/lib/docker/overlay2/4ce3ed3d4de0b3c36ff2d6fa9e02bcad23ac6443956025d88554c6ffba5c6a5c-init/diff:/var/lib/docker/overlay2/7b389d471518749f4313bda7c9806b0df438cf949ff0a3a9ee5340f7c4b882f5/diff:/var/lib/docker/overlay2/5ab6915d33c30222a5ff339b75e0ec170b5591a0e65588338226f9184a04d0dd/diff:/var/lib/docker/overlay2/480aa317fc5dc68aad71fc236f6395b42d9dad280375c8a1489d7725ccf45f7e/diff:/var/lib/docker/overlay2/49563169d480258fda904327ca2a241fe6c498cbaeaca5b95f1a376370d39bb0/diff:/var/lib/docker/overlay2/234a6134d9c8ed77a4c323c0844677ac868510ac8a29f1b022fe51c80f5bddbd/diff:/var/lib/docker/overlay2/6afcb182c114553b967b66198985c7f3c42d0a840fad22b2fcb69b1b0bbc39e2/diff:/var/lib/docker/overlay2/d9efd98f51815155e9510cf018e058ddf3b679d051ea2b6e926d682691d9ef4d/diff:/var/lib/docker/overlay2/3f4c05c93b62e69aa1402f58b7a896d474b921708aeb771e85a0a131236947d4/diff"
+    MergedDir: "/var/lib/docker/overlay2/4ce3ed3d4de0b3c36ff2d6fa9e02bcad23ac6443956025d88554c6ffba5c6a5c/merged"
+    UpperDir: "/var/lib/docker/overlay2/4ce3ed3d4de0b3c36ff2d6fa9e02bcad23ac6443956025d88554c6ffba5c6a5c/diff"
+    WorkDir: "/var/lib/docker/overlay2/4ce3ed3d4de0b3c36ff2d6fa9e02bcad23ac6443956025d88554c6ffba5c6a5c/work"
+  Name: overlay2
+Mounts:
+- Type: volume
+  Name: 04a5e62702a17b30cc1ea5e6589895e91e2ab80674c9fe3b7f3db6ea05d201c0
+  Source: "/var/lib/docker/volumes/04a5e62702a17b30cc1ea5e6589895e91e2ab80674c9fe3b7f3db6ea05d201c0/_data"
+  Destination: "/data"
+  Driver: local
+  Mode: ''
+  RW: true
+  Propagation: ''
+Config:
+  Hostname: 378ea353fd9a
+  Domainname: ''
+  User: ''
+  AttachStdin: false
+  AttachStdout: false
+  AttachStderr: false
+  ExposedPorts:
+    6379/tcp: {}
+  Tty: false
+  OpenStdin: false
+  StdinOnce: false
+  Env:
+  - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  - GOSU_VERSION=1.17
+  - REDIS_VERSION=7.4.0
+  - REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.4.0.tar.gz
+  - REDIS_DOWNLOAD_SHA=57b47c2c6682636d697dbf5d66d8d495b4e653afc9cd32b7adf9da3e433b8aaf
+  Cmd:
+  - redis-server
+  Image: redis
+  Volumes:
+    "/data": {}
+  WorkingDir: "/data"
+  Entrypoint:
+  - docker-entrypoint.sh
+  OnBuild: 
+  Labels: {}
+NetworkSettings:
+  Bridge: ''
+  SandboxID: ''
+  SandboxKey: ''
+  Ports: {}
+  HairpinMode: false
+  LinkLocalIPv6Address: ''
+  LinkLocalIPv6PrefixLen: 0
+  SecondaryIPAddresses: 
+  SecondaryIPv6Addresses: 
+  EndpointID: ''
+  Gateway: ''
+  GlobalIPv6Address: ''
+  GlobalIPv6PrefixLen: 0
+  IPAddress: ''
+  IPPrefixLen: 0
+  IPv6Gateway: ''
+  MacAddress: ''
+  Networks:
+    bridge:
+      IPAMConfig: 
+      Links: 
+      Aliases: 
+      MacAddress: ''
+      DriverOpts: 
+      NetworkID: 21562ce451fb866895ed3701fe0dd3dc47f2d2a9d64b5d502af1491a456c5034
+      EndpointID: ''
+      Gateway: ''
+      IPAddress: ''
+      IPPrefixLen: 0
+      IPv6Gateway: ''
+      GlobalIPv6Address: ''
+      GlobalIPv6PrefixLen: 0
+      DNSNames: 

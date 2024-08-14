@@ -1,0 +1,205 @@
+---
+Id: c5749f4dabb86820d95f6d6b95c1dcca50b3805fd4d5367b83d369b407e9bfd9
+Created: '2024-08-04T11:34:54.984185977Z'
+Path: docker-entrypoint.sh
+Args:
+- postgres
+State:
+  Status: running
+  Running: true
+  Paused: false
+  Restarting: false
+  OOMKilled: false
+  Dead: false
+  Pid: 696
+  ExitCode: 0
+  Error: ''
+  StartedAt: '2024-08-14T15:55:14.449548907Z'
+  FinishedAt: '2024-08-14T15:39:58.525476401Z'
+Image: sha256:07a4ee949b9e7851d9ef860fd36f486aa821f23e1c17939244155fe825eaf79a
+ResolvConfPath: "/var/lib/docker/containers/c5749f4dabb86820d95f6d6b95c1dcca50b3805fd4d5367b83d369b407e9bfd9/resolv.conf"
+HostnamePath: "/var/lib/docker/containers/c5749f4dabb86820d95f6d6b95c1dcca50b3805fd4d5367b83d369b407e9bfd9/hostname"
+HostsPath: "/var/lib/docker/containers/c5749f4dabb86820d95f6d6b95c1dcca50b3805fd4d5367b83d369b407e9bfd9/hosts"
+LogPath: "/var/lib/docker/containers/c5749f4dabb86820d95f6d6b95c1dcca50b3805fd4d5367b83d369b407e9bfd9/c5749f4dabb86820d95f6d6b95c1dcca50b3805fd4d5367b83d369b407e9bfd9-json.log"
+Name: "/some-postgres"
+RestartCount: 0
+Driver: overlay2
+Platform: linux
+MountLabel: ''
+ProcessLabel: ''
+AppArmorProfile: ''
+ExecIDs:
+- cce0c0d98ac1927a5f26de28dca02dae8b87694a3606851f3edc1ea1aa00ec97
+HostConfig:
+  Binds: 
+  ContainerIDFile: ''
+  LogConfig:
+    Type: json-file
+    Config: {}
+  NetworkMode: bridge
+  PortBindings:
+    5432/tcp:
+    - HostIp: ''
+      HostPort: '5432'
+  RestartPolicy:
+    Name: 'no'
+    MaximumRetryCount: 0
+  AutoRemove: false
+  VolumeDriver: ''
+  VolumesFrom: 
+  ConsoleSize:
+  - 30
+  - 120
+  CapAdd: 
+  CapDrop: 
+  CgroupnsMode: host
+  Dns: []
+  DnsOptions: []
+  DnsSearch: []
+  ExtraHosts: 
+  GroupAdd: 
+  IpcMode: private
+  Cgroup: ''
+  Links: 
+  OomScoreAdj: 0
+  PidMode: ''
+  Privileged: false
+  PublishAllPorts: false
+  ReadonlyRootfs: false
+  SecurityOpt: 
+  UTSMode: ''
+  UsernsMode: ''
+  ShmSize: 67108864
+  Runtime: runc
+  Isolation: ''
+  CpuShares: 0
+  Memory: 0
+  NanoCpus: 0
+  CgroupParent: ''
+  BlkioWeight: 0
+  BlkioWeightDevice: []
+  BlkioDeviceReadBps: []
+  BlkioDeviceWriteBps: []
+  BlkioDeviceReadIOps: []
+  BlkioDeviceWriteIOps: []
+  CpuPeriod: 0
+  CpuQuota: 0
+  CpuRealtimePeriod: 0
+  CpuRealtimeRuntime: 0
+  CpusetCpus: ''
+  CpusetMems: ''
+  Devices: []
+  DeviceCgroupRules: 
+  DeviceRequests: 
+  MemoryReservation: 0
+  MemorySwap: 0
+  MemorySwappiness: 
+  OomKillDisable: false
+  PidsLimit: 
+  Ulimits: []
+  CpuCount: 0
+  CpuPercent: 0
+  IOMaximumIOps: 0
+  IOMaximumBandwidth: 0
+  MaskedPaths:
+  - "/proc/asound"
+  - "/proc/acpi"
+  - "/proc/kcore"
+  - "/proc/keys"
+  - "/proc/latency_stats"
+  - "/proc/timer_list"
+  - "/proc/timer_stats"
+  - "/proc/sched_debug"
+  - "/proc/scsi"
+  - "/sys/firmware"
+  - "/sys/devices/virtual/powercap"
+  ReadonlyPaths:
+  - "/proc/bus"
+  - "/proc/fs"
+  - "/proc/irq"
+  - "/proc/sys"
+  - "/proc/sysrq-trigger"
+GraphDriver:
+  Data:
+    LowerDir: "/var/lib/docker/overlay2/464c4e192f5b802b730826773b8a1d19373089c92685b7f190ce643ab5882f96-init/diff:/var/lib/docker/overlay2/6d838bf0cedbe326ef82935f864be3651e8fa3802f22825da2b309fc0c4cde85/diff:/var/lib/docker/overlay2/3df72d4825c2e57be4a55d4a2f9b8ae175e359300c350ba6813ffd94afaaa6e2/diff:/var/lib/docker/overlay2/98805dadcf7837e4067d429ebf60ccdb7df6851c3a8d3fa4649b6d38931ba453/diff:/var/lib/docker/overlay2/01cc9b43a6126247f68a8167680c199f24bff7f3630a4b2c757b02157609c9e7/diff:/var/lib/docker/overlay2/a8b79e5f495c269fd4451bf26eb84731f8a42537a6ee800d553ad60bdf56a33b/diff:/var/lib/docker/overlay2/6f165093411a01c0d4f364d4f9c8b2fa08d124faeae5e6c77562acbbe1ec7c31/diff:/var/lib/docker/overlay2/aeccb602772cba847ca6da6f704527882c8b2591e0ac39194718b1f48dd56b1e/diff:/var/lib/docker/overlay2/62b87da55de3a82e3fa3e5ee785a5c3e4fd50cb5c8b6bfa9d2f89ff4a49a02dc/diff:/var/lib/docker/overlay2/0691dc9c75047548822bef9d0ca2fa83b6f0df30a1084e31b45b187c2995a841/diff:/var/lib/docker/overlay2/5eac13e9e137db9b6a3f91d3e458a27e65ff5745b2d7a25398519231721f1fb8/diff:/var/lib/docker/overlay2/db06cd02639b74ecd8f9a9ea9540d8d1c6c60e28db69e30f78d6bf82a70599db/diff:/var/lib/docker/overlay2/28ed23cfa73c980381b63c1ebfed2ae1b189d124ea6e9a63cc3d8311341e727d/diff:/var/lib/docker/overlay2/8038a7e991f3b267f8c776be848ec2cc941b795a4384126c143bf598e2de9fd4/diff:/var/lib/docker/overlay2/3f4c05c93b62e69aa1402f58b7a896d474b921708aeb771e85a0a131236947d4/diff"
+    MergedDir: "/var/lib/docker/overlay2/464c4e192f5b802b730826773b8a1d19373089c92685b7f190ce643ab5882f96/merged"
+    UpperDir: "/var/lib/docker/overlay2/464c4e192f5b802b730826773b8a1d19373089c92685b7f190ce643ab5882f96/diff"
+    WorkDir: "/var/lib/docker/overlay2/464c4e192f5b802b730826773b8a1d19373089c92685b7f190ce643ab5882f96/work"
+  Name: overlay2
+Mounts:
+- Type: volume
+  Name: 43c18189ecb5602dd04eb956b2f89934c700d232fb843d246f59da693c427c13
+  Source: "/var/lib/docker/volumes/43c18189ecb5602dd04eb956b2f89934c700d232fb843d246f59da693c427c13/_data"
+  Destination: "/var/lib/postgresql/data"
+  Driver: local
+  Mode: ''
+  RW: true
+  Propagation: ''
+Config:
+  Hostname: c5749f4dabb8
+  Domainname: ''
+  User: ''
+  AttachStdin: false
+  AttachStdout: false
+  AttachStderr: false
+  ExposedPorts:
+    5432/tcp: {}
+  Tty: false
+  OpenStdin: false
+  StdinOnce: false
+  Env:
+  - POSTGRES_PASSWORD=123456
+  - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/16/bin
+  - GOSU_VERSION=1.17
+  - LANG=en_US.utf8
+  - PG_MAJOR=16
+  - PG_VERSION=16.3-1.pgdg120+1
+  - PGDATA=/var/lib/postgresql/data
+  Cmd:
+  - postgres
+  Image: postgres
+  Volumes:
+    "/var/lib/postgresql/data": {}
+  WorkingDir: ''
+  Entrypoint:
+  - docker-entrypoint.sh
+  OnBuild: 
+  Labels: {}
+  StopSignal: SIGINT
+NetworkSettings:
+  Bridge: ''
+  SandboxID: d343d5aaf3de740bbe5490b007492feb9bb80c47c695cf07edbb9de40625dec8
+  SandboxKey: "/var/run/docker/netns/d343d5aaf3de"
+  Ports:
+    5432/tcp:
+    - HostIp: 0.0.0.0
+      HostPort: '5432'
+  HairpinMode: false
+  LinkLocalIPv6Address: ''
+  LinkLocalIPv6PrefixLen: 0
+  SecondaryIPAddresses: 
+  SecondaryIPv6Addresses: 
+  EndpointID: f8d3b331c10165b7012d3d86b1964b13983d0ce0909465fff269405f2e476c5e
+  Gateway: 172.17.0.1
+  GlobalIPv6Address: ''
+  GlobalIPv6PrefixLen: 0
+  IPAddress: 172.17.0.2
+  IPPrefixLen: 16
+  IPv6Gateway: ''
+  MacAddress: 02:42:ac:11:00:02
+  Networks:
+    bridge:
+      IPAMConfig: 
+      Links: 
+      Aliases: 
+      MacAddress: 02:42:ac:11:00:02
+      DriverOpts: 
+      NetworkID: 21562ce451fb866895ed3701fe0dd3dc47f2d2a9d64b5d502af1491a456c5034
+      EndpointID: f8d3b331c10165b7012d3d86b1964b13983d0ce0909465fff269405f2e476c5e
+      Gateway: 172.17.0.1
+      IPAddress: 172.17.0.2
+      IPPrefixLen: 16
+      IPv6Gateway: ''
+      GlobalIPv6Address: ''
+      GlobalIPv6PrefixLen: 0
+      DNSNames: 
