@@ -245,6 +245,11 @@ if (Test-Path -Path Env:PYTHONHOME) {
 # Add the venv to the PATH
 Copy-Item -Path Env:PATH -Destination Env:_OLD_VIRTUAL_PATH
 $Env:PATH = "$VenvExecDir$([System.IO.Path]::PathSeparator)$Env:PATH"
+$env:DB_NAME="postgres"
+$env:DB_USER="postgres"
+$env:DB_PASSWORD="123456"
+$env:DB_HOST="127.0.0.1"
+$env:DB_PORT="5432"
 
 # SIG # Begin signature block
 # MIIvIwYJKoZIhvcNAQcCoIIvFDCCLxACAQExDzANBglghkgBZQMEAgEFADB5Bgor

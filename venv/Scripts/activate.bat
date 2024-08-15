@@ -9,6 +9,11 @@ if defined _OLD_CODEPAGE (
 )
 
 set VIRTUAL_ENV=C:\Users\OmerIshai\code\api_tests\venv
+set DB_NAME="postgres"
+set DB_USER="postgres"
+set DB_PASSWORD="123456"
+set DB_HOST="127.0.0.1"
+set DB_PORT="5432"
 
 if not defined PROMPT set PROMPT=$P$G
 
