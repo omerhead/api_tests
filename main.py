@@ -26,9 +26,7 @@ app = FastAPI()
 
 # CORS settings
 origins = [
-    "http://localhost",
-    "http://localhost:8000",
-    "http://localhost:5173"
+    "*"
 ]
 
 app.add_middleware(
@@ -55,7 +53,7 @@ class APITestDelete(BaseModel):
     id: int
 
 class APITests(BaseModel):
-    ids: List[str]
+    ids: List[int]
 
 async def get_db_connection():
     try:
@@ -127,46 +125,51 @@ async def get_api_tests(page: int = 1, itemsPerPage: int = 10, sortBy: Optional[
         await conn.close()
     return {"items": api_tests, "total": total}
 
-@app.post("/run_test/",response_model=Dict[str,Any])
-async def run_test(api_test_ids: APITests) -> dict[str, Any]:
+@app.post("/run_test/", response_model=Dict[str, Any])
+async def run_test(api_test_ids: APITests) -> Dict[str, Any]:
     conn = await get_db_connection()
-    
     try:
         ids_tuple = tuple(api_test_ids.ids)
         if not ids_tuple:
-            return HTTPException(status_code=400,detail="Invalid request")
-        query = "SELECT * FROM api_tests WHERE id IN %s"
+            raise HTTPException(status_code=400, detail="Invalid request")
         
-        rows = await conn.execute(query,(ids_tuple,))
-        records = conn.fetchall()
+        query = "SELECT * FROM api_tests WHERE id = ANY($1)"
         
-        api_tests = [dict(row) for row in records]
-        test_results = []
+        rows = await conn.fetch(query, ids_tuple)
+        api_tests = [dict(row) for row in rows]
+        
         for api_test in api_tests:
             res = await execute_test(api_test)
-            test_results.append(res)
-            await save_results_to_redis(api_test['id'],res)
+            api_test['result'] = res
+            await save_results_to_redis(api_test['id'], res)
             
-            if res['response_code'] != api_test['expected_response_code'] or res['response_json'] != json.loads(test['expected_response_json']):
+            if res['response_code'] != api_test['expected_response_code'] or res['response_json'] != json.loads(api_test['expected_response_json']):
                 print(f"Test {api_test['id']} failed.")
                 print(f"code: {res['response_code']}")
                 print(f"response: {res['response_json']}")
+                api_test['state'] = "failed"
             else:
                 print(f"Test {api_test['id']} passed.")
+                api_test['state'] = "passed"
     finally:
         await conn.close()
-    return {"items": api_tests, "results": test_results}
+    
+    return {"items": api_tests}
             
-            
-async def execute_test(test):
+async def execute_test(test) -> Dict[str, Any]:
     async with httpx.AsyncClient() as client:
         response = await client.request(
             method=test['request_method'],
             url=test['url'],
             json=json.loads(test['payload'])
         )
+        try:
+            response_json = response.json()
+        except json.JSONDecodeError:
+            response_json = None
+
         return {
             'id': test['id'],
             'response_code': response.status_code,
-            'response_json': response.json()
+            'response_json': response_json
         }
